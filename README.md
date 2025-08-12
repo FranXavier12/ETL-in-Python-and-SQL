@@ -65,8 +65,6 @@ SQLAlchemy-VSCode-Python-script-Airflow-WSL-MySQL-Customers-Orders-etl/
    - Schedules the job with **Apache Airflow** running in **WSL2/Ubuntu**.
    - Loads credentials from an **Airflow Connection** (`mysql_conn`).
 
-> This repo captures the end-to-end flow we used in practice (with the gotchas fixed).
-
 ---
 
 ## Prereqs
