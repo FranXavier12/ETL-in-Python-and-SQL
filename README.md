@@ -20,27 +20,33 @@ End-to-end ETL pipeline in **Python & SQL** — Load Excel data into **MySQL** u
 ## Repository Structure
 
 ### SQLAlchemy-VSCode-Python-script-Airflow-WSL-MySQL-Customers-Orders-etl/
-├─ README.md
-├─ .gitignore
-├─ requirements.txt
-├─ VS Code Python Script/
-│  ├─ SQLAlchemy_engine_Pandas.py        # Load Excel → MySQL via SQLAlchemy
-│  ├─ Check_DB_MySQL.sql                 # MySQL queries to validate data
-│  ├─ Check_DB_Python.py                 # Validate MySQL data from Python
-│  ├─ Data_quality_checks_examples.sql   # Example quality checks
-├─ dags/
-│  ├─ orders_dag.py                      # Airflow DAG definition
-│  └─ orders_etl_logic2.py               # ETL logic for Orders table
-├─ scripts/
-│  ├─ add_airflow_conn.sh                # Script to add Airflow connection
-│  ├─ print_win_ip.sh                     # Print Windows host IP
-│  └─ run_airflow_standalone.sh           # Start Airflow standalone
-├─ docs/
-│  ├─ images/                             # Screenshots
-│  └─ notes.md                            # notes / commands
-└─ data/
-   ├─ H+ Sport Customers.xlsx
-   └─ H+ Sport orders.xlsx
+├── README.md                         # Project overview and instructions
+├── .gitignore                        # Git ignore rules
+├── requirements.txt                  # Python dependencies
+│
+├── VS Code Python Script/            # Local Python scripts for ETL & checks
+│   ├── SQLAlchemy_engine_Pandas.py   # Load Excel → MySQL via SQLAlchemy & Pandas
+│   ├── Check_DB_MySQL.sql            # SQL queries to validate loaded data
+│   ├── Check_DB_Python.py            # Validate MySQL data from Python
+│   └── Data_quality_checks_examples.sql # Example data-quality checks
+│
+├── dags/                             # Apache Airflow DAGs and ETL logic
+│   ├── orders_dag.py                 # Airflow DAG definition for Orders ETL
+│   └── orders_etl_logic2.py          # Python ETL logic for Orders table
+│
+├── scripts/                          # Setup & operational helper scripts
+│   ├── add_airflow_conn.sh           # Add Airflow MySQL connection
+│   ├── print_win_ip.sh               # Print Windows host IP (for WSL)
+│   └── run_airflow_standalone.sh     # Launch Airflow in standalone mode
+│
+├── docs/                             # Documentation & notes
+│   ├── images/                       # Screenshots / diagrams
+│   └── notes.md                      # Commands, tips, and project notes
+│
+└── data/                             # Source datasets (sample Excel files)
+    ├── H+ Sport Customers.xlsx
+    └── H+ Sport orders.xlsx
+
 
 ---
 
