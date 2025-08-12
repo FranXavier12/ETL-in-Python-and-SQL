@@ -19,33 +19,35 @@ End-to-end ETL pipeline in **Python & SQL** — Load Excel data into **MySQL** u
 
 ## Repository Structure
 
-### SQLAlchemy-VSCode-Python-script-Airflow-WSL-MySQL-Customers-Orders-etl/
-├── README.md                         # Project overview and instructions
-├── .gitignore                        # Git ignore rules
-├── requirements.txt                  # Python dependencies
+```text
+SQLAlchemy-VSCode-Python-script-Airflow-WSL-MySQL-Customers-Orders-etl/
+├── README.md
+├── .gitignore
+├── requirements.txt
 │
-├── VS Code Python Script/            # Local Python scripts for ETL & checks
-│   ├── SQLAlchemy_engine_Pandas.py   # Load Excel → MySQL via SQLAlchemy & Pandas
-│   ├── Check_DB_MySQL.sql            # SQL queries to validate loaded data
-│   ├── Check_DB_Python.py            # Validate MySQL data from Python
-│   └── Data_quality_checks_examples.sql # Example data-quality checks
+├── VS Code Python Script/
+│   ├── SQLAlchemy_engine_Pandas.py        # Load Excel → MySQL via SQLAlchemy & Pandas
+│   ├── Check_DB_MySQL.sql                 # MySQL queries to validate data
+│   ├── Check_DB_Python.py                 # Validate MySQL data from Python
+│   └── Data_quality_checks_examples.sql   # Example quality checks
 │
-├── dags/                             # Apache Airflow DAGs and ETL logic
-│   ├── orders_dag.py                 # Airflow DAG definition for Orders ETL
-│   └── orders_etl_logic2.py          # Python ETL logic for Orders table
+├── dags/
+│   ├── orders_dag.py                      # Airflow DAG definition
+│   └── orders_etl_logic2.py               # ETL logic for Orders table
 │
-├── scripts/                          # Setup & operational helper scripts
-│   ├── add_airflow_conn.sh           # Add Airflow MySQL connection
-│   ├── print_win_ip.sh               # Print Windows host IP (for WSL)
-│   └── run_airflow_standalone.sh     # Launch Airflow in standalone mode
+├── scripts/
+│   ├── add_airflow_conn.sh                # Add Airflow connection
+│   ├── print_win_ip.sh                    # Print Windows host IP (WSL)
+│   └── run_airflow_standalone.sh          # Start Airflow standalone
 │
-├── docs/                             # Documentation & notes
-│   ├── images/                       # Screenshots / diagrams
-│   └── notes.md                      # Commands, tips, and project notes
+├── docs/
+│   ├── images/                            # Screenshots
+│   └── notes.md                           # Notes / commands
 │
-└── data/                             # Source datasets (sample Excel files)
+└── data/
     ├── H+ Sport Customers.xlsx
     └── H+ Sport orders.xlsx
+```
 
 
 ---
